@@ -2,9 +2,9 @@
 
 Records your meetings, transcribes them, and writes the summary **without sending a single word to the internet**. No bot joins your call. No account. No cloud.
 
-This repository hosts the public installers for the free Demo. The application source code is private.
+**Get it on the [Microsoft Store](https://apps.microsoft.com/detail/9NWK1NZVHG8X)** — free to start, with 7 days of Pro included. It updates itself from the Store. More at [airgapscribe.com](https://airgapscribe.com).
 
-**Download:** [Releases](../../releases) · [Microsoft Store](https://apps.microsoft.com/detail/9NWK1NZVHG8X) · [airgapscribe.com](https://airgapscribe.com)
+> The installers under [Releases](../../releases) are old (1.0.x, from August 2026) and are kept only for reference. Please install from the Microsoft Store instead: a copy installed from an old installer does not update and can keep the Store version from starting. The application source code is private.
 
 ---
 
@@ -12,7 +12,7 @@ This repository hosts the public installers for the free Demo. The application s
 
 Most meeting-notes tools send your audio to a server, and many of them join the call as a visible bot. That is a problem in three situations that keep coming up:
 
-- **Your IT department blocks them.** Otter, Fireflies and Zoom AI are commonly blocked on corporate networks, and asking for an exception takes weeks.
+- **Your IT department blocks them.** Cloud notetakers are commonly blocked on corporate networks, and asking for an exception takes weeks.
 - **You are under an NDA or professional confidentiality.** Lawyers, therapists, auditors and HR often cannot upload a recording anywhere, at all.
 - **You have no connection.** A plane, a basement meeting room, a client site with locked-down guest wifi.
 
@@ -22,23 +22,24 @@ AirGapScribe runs the whole pipeline on the machine, so none of those situations
 
 | | |
 |---|---|
-| **Audio capture** | Microphone and system audio recorded separately, so a video call keeps both sides distinguishable |
+| **Recording** | One click on the tray icon, next to the clock. Microphone and system audio are recorded separately, so a video call keeps both sides distinguishable |
 | **Transcription** | Whisper, running locally. English and Spanish, with a custom vocabulary for names and jargon |
-| **Summary** | A local AI model writes the minutes when the recording stops |
-| **Chat** | A local assistant you can ask about meetings you already recorded |
+| **My meetings** | Every recording and transcript in one place, with search and a player |
+| **Summary** (Pro) | A local AI model writes the minutes, tasks and a follow-up email |
+| **Chat** (Pro) | A local assistant you can ask about meetings you already recorded |
 | **Account** | None. There is nothing to sign up for |
 
-The base transcription model and a 1,066 MB local AI model **ship inside the installer** — a fresh install can record, transcribe and summarize with nothing else downloaded.
+The base transcription model and a 1,056 MB local AI model **ship inside the app** — a fresh install can record, transcribe and summarize with nothing else downloaded.
 
-Optional downloads exist, are always requested by you, and always show their size first: an NVIDIA acceleration pack (780 MB compressed, 1,647 MB on disk), a larger AI model that hallucinates less when summarizing (2,008 MB), and additional transcription models (75–2,900 MB).
+Optional downloads exist, are always requested by you, and always show their size first: an NVIDIA acceleration pack (780 MB compressed, 1,647 MB on disk) and additional transcription models (72–2,948 MB).
 
 ## Verifying the "local only" claim
 
-You do not have to take this on faith, and the free Demo is enough to check it:
+You do not have to take this on faith, and the free version is enough to check it:
 
 1. Install it and put the machine in airplane mode, or pull the network cable.
 2. Record and transcribe a meeting. It works.
-3. If you want to be thorough, run a network monitor while it processes. There is no outbound traffic to send.
+3. If you want to be thorough, run a network monitor while it processes. There is no outbound traffic to send. The app only goes online for the optional downloads above, which you request, and to validate a Pro licence.
 
 ## What it does not do
 
@@ -61,7 +62,7 @@ Yes. It does not need outbound connections to transcribe, which is the usual rea
 On your machine, in your user data directory. Nothing is uploaded, so there is no server copy to delete.
 
 **Is it free?**
-The Demo is free with sessions up to 10 minutes, unlimited over time, and no account. Pro lifts the limit — pricing on [airgapscribe.com](https://airgapscribe.com).
+When you install it you get 7 days of Pro, with no key or sign-up. After that the free version transcribes up to 45 minutes per recording, with no time limit on the plan itself. Pro removes the limit and enables the AI assistant — pricing on [airgapscribe.com](https://airgapscribe.com).
 
 **What languages?**
 Transcription in English and Spanish. The interface is available in both.
@@ -74,12 +75,14 @@ AirGapScribe graba tus reuniones, las transcribe y prepara la minuta **sin envia
 
 Todo el procesamiento ocurre en tu equipo con modelos de IA instalados localmente: Whisper para transcribir, en español o inglés, con vocabulario propio para los nombres y términos de tu trabajo. Funciona detrás de firewalls corporativos y sin conexión, que es justamente donde las herramientas en la nube dejan de servir.
 
+Al instalar tienes 7 días de Pro gratis, sin clave ni registro. Después, la versión gratis transcribe hasta 45 minutos por grabación; Pro quita el límite y habilita el asistente de IA local.
+
 Solo Windows. Sin apps móviles ni colaboración en tiempo real.
 
-Este repositorio aloja únicamente los instaladores públicos de la versión Demo. El código fuente es privado.
+**Descárgalo desde la [Microsoft Store](https://apps.microsoft.com/detail/9NWK1NZVHG8X)**, que lo mantiene actualizado. Los instaladores de [Releases](../../releases) son antiguos (1.0.x) y se conservan solo como referencia. El código fuente es privado.
 
 Sitio oficial: [airgapscribe.com](https://airgapscribe.com)
 
 ---
 
-Built by [Prototype Servicios Informáticos y Comercializadora E.I.R.L.](https://airgapscribe.com) · Bug reports and questions: [Issues](../../issues) or support@airgapscribe.com
+Built by [Malow Software](https://airgapscribe.com) · Bug reports and questions: [Issues](../../issues) or support@airgapscribe.com
